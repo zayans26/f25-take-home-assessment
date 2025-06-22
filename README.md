@@ -93,7 +93,7 @@ Get your API key at: [https://weatherstack.com](https://weatherstack.com)
 
 ## 🙌 Credits
 
-Built by Zayan Anwar for the Lynkr Assessment
+Built by Zayan Sadath for the Lynkr Assessment
 
 ---
 
