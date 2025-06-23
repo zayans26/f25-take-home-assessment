@@ -41,7 +41,6 @@ export function useWeatherHistory() {
   }, []);
 
   const addToHistory = (item: WeatherHistoryItem) => {
-    // Always read latest from localStorage, not from `prev`
     const stored = localStorage.getItem(STORAGE_KEY);
     const currentHistory: WeatherHistoryItem[] = stored ? JSON.parse(stored) : [];
 
@@ -49,7 +48,7 @@ export function useWeatherHistory() {
     const updated = [item, ...filtered].slice(0, 10);
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
-    window.dispatchEvent(new Event(HISTORY_EVENT)); // Notify listeners
+    window.dispatchEvent(new Event(HISTORY_EVENT)); 
     setHistory(updated);
   };
 
